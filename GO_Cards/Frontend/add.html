@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить новость</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #2c2c2c; 
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0; 
+            border: none; 
+            border-radius: 5px; 
+            background-color: #444; 
+            color: white; 
+        }
+        button {
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: none; 
+            cursor: pointer; 
+        }
+        button:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Добавить новость</h1>
+    <form action="/add" method="post">
+        <label for="title">Заголовок:</label><br>
+        <input type="text" name="title" required><br>
+
+        <label for="short_description">Краткое описание:</label><br>
+        <textarea name="short_description" required></textarea><br>
+
+        <label for="content">Содержание:</label><br>
+        <textarea name="content" required></textarea><br>
+
+        <button type="submit">Добавить новость</button>
+        <button onclick="window.location.href='/admin'">Вернуться на админ панель</button>
+    </form>
+</body>
+</html>
+
